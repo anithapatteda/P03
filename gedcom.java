@@ -24,7 +24,7 @@ public class gedcom {
 	}
 	
 	/*
-	 * This methods imports the AnithaFamily.txt from agile folder and reads the file from line
+	 * This methods imports the from agile folder and reads the file from line
 	 * by line intrepreting the tags of the line.
 	 * Displays level number
 	 * Gedcom line
