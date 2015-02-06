@@ -1,12 +1,6 @@
 /** 
  * This class Contains map with gedcom keys
  * displays the key values and level number and details
- * of the family of Anitha Patteda
- * Contains f1,f2,f3,f4 families
- * F1 - Anitha,Prasanna,Dhriti
- * F2 - Neelakantappa,Gangamma,Anitha,Anand
- * F3 - Anand,Sushmitha
- * F4 - Dhriti
  */
 
 package Agile;
