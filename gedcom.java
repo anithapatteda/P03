@@ -107,6 +107,7 @@ public class gedcom {
 		String value = new String();
 		if(TagMap.containsKey(tag)){
 			value =  TagMap.get(tag).toString();
+			System.out.println("Valid Tag");
 		}else{
 			value = "Invalid Tag";
 		}
