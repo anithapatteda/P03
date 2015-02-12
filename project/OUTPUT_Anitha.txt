@@ -1,0 +1,34 @@
+Individuals:
+  ID: @I1@
+NAME: Anitha /Patteda/
+
+  ID: @I2@
+NAME: Neelakantappa /Patteda/
+
+  ID: @I3@
+NAME: Gangamma /Turkani/
+
+  ID: @I4@
+NAME: Anand /Patteda/
+
+  ID: @I5@
+NAME: Sushmitha /K/
+
+  ID: @I6@
+NAME: Prasanna /Kori/
+
+  ID: @I7@
+NAME: Dhriti /Kori/
+
+Families:
+     ID:@F1@
+HUSBAND: Prasanna /Kori/
+   WIFE: Anitha /Patteda/
+
+     ID:@F2@
+HUSBAND: Neelakantappa /Patteda/
+   WIFE: Gangamma /Turkani/
+
+     ID:@F3@
+HUSBAND: Anand /Patteda/
+   WIFE: Sushmitha /K/
