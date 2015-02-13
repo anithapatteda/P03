@@ -1,4 +1,6 @@
-package Agile;
+package agile;
+
+
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -6,15 +8,24 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.HashMap;
+import java.io.PrintWriter;
+import java.io.FileWriter;
+import java.util.*;
 
 public class project03 {
-	public static void main(String args[]){
+	public static void main(String args[]) throws Exception{
 		ReadFiles();
 	}
 	
 	public static void ReadFiles(){
 		String files;
-	    File folder = new File("C:/eclipse/Programmes/Agile");
+	    File folder = new File("C:/Users/KC/Desktop/gedcom");
+	    PrintWriter output=null;
+	    try {
+	    output = new PrintWriter(new FileWriter("D:\\myjava\\output.txt"));
+	    } catch (IOException e1) {
+	   	    e1.printStackTrace();
+	    }
 	    File[] listOfFiles = folder.listFiles(); 
 	    
 	   // Charset charset = Charset.forName("UTF-8");
@@ -27,7 +38,7 @@ public class project03 {
 	      	   
 	    	   if (files.endsWith(".txt") || files.endsWith(".TXT")){
 	    		   String filename = files.toUpperCase();
-	    		   System.out.println("START OF FILE :"+filename);
+	    		   output.println("START OF FILE :"+filename);
 	    		   try{
 	    		   BufferedReader br = new BufferedReader(new FileReader(listOfFiles[i]));
 	    		   HashMap NameId = new HashMap();
@@ -53,21 +64,21 @@ public class project03 {
 	    				   // System.out.println(NameId);
 	    				  }
 	    				  if(lineVariables[2].equals("FAM")){
-	    					  System.out.println("-------------------");
-	    					  System.out.println(" Family ID :"+lineVariables[1]);
+	    					  output.println("-------------------");
+	    					  output.println(" Family ID :"+lineVariables[1]);
 	    				  }
 	    				  if(lineVariables[1].equals("HUSB")){
 	    					 String husband = (String) NameId.get(lineVariables[2]);
-	    					 System.out.println("Unique Id :"+lineVariables[2]+" "+" Husband Name :"+husband);
+	    					 output.println("Unique Id :"+lineVariables[2]+" "+" Husband Name :"+husband);
 	    				  }
 	    				  if(lineVariables[1].equals("WIFE")){
 		    					 String wife = (String) NameId.get(lineVariables[2]);
-		    					 System.out.println("Unique Id :"+lineVariables[2]+" "+" Wife Name :"+wife);
+		    					 output.println("Unique Id :"+lineVariables[2]+" "+" Wife Name :"+wife);
 		    					 
 		    			  }
 	    				  if(lineVariables[1].equals("CHIL")){
 	    					  String child = (String) NameId.get(lineVariables[2]);
-		    					System.out.println("Unique Id :"+lineVariables[2]+" "+" Child Name :"+child);
+	    					  output.println("Unique Id :"+lineVariables[2]+" "+" Child Name :"+child);
 		    					
 	    				  }
 	    				 
@@ -76,12 +87,14 @@ public class project03 {
 	    		   }catch(Exception e){
 	    			   
 	    		   }
-	    		   System.out.println("END OF FAMILY : "+filename);
-	    		   System.out.println("             ");
+	    		   output.println("END OF FAMILY : "+filename);
+	    		   output.println("             ");
 	    	   }
 	               
 	           
-	      }
+	      }output.close();
+	       
 	}
+	
 
 }
