@@ -1,6 +1,9 @@
+/* This class is object for individuals
+  has all the get and set methods for tags
+*/
+
 package ssw555.project.data;
 import java.util.*;
-
 
 
 public class individual {
@@ -13,10 +16,10 @@ public class individual {
  private Date birthDate;
  private Date deathDate;
  private char deceased;
+ 
  public String getIdentifier() {
   return identifier;
  }
- 
  
  
  public void setIdentifier(String identifier) {
